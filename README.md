@@ -74,3 +74,9 @@ Supabase
 Twilio API
 
 Render Cloud
+---
+
+🙌 **Thanks for visiting!**  
+If you have questions or feedback, feel free to:  
+- 📧 Email: [gabriellanekwek@gmail.com](mailto:gabriellanekwek@gmail.com)  
+- 🌟 Star this repo if you found it useful!  
