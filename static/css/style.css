@@ -1,0 +1,411 @@
+
+html, body {
+  font-family: "EB Garamond", Garamond, serif; /*font-family: Garamond, serif;  am forcing my whole page to have this font*/
+  /*background-color: #FAF9F6 !important; /*background-color: #FAF9F6; am forcing my whole page to have this color since sections have aliceblue*/
+  /*The !important ensures it overrides other styles that might be applied from elsewhere.*/
+  margin: 0;
+  padding: 0;/*padding-top: 20px;* if i put this, the navbar will be far down in the page*/
+  background-color: #F0F8FF !important;/*am forcing the entire webpage to have this color since for the sections,
+  some refuse, but am preserving their code*/
+  /* my bacground image to be peonies.png*/
+  /*put linear gradient code first the image, so that it loads first, otherwise, it will cover the image */
+   background-image: 
+                      linear-gradient(rgba(240, 248, 255, 0.9), rgba(240, 248, 255, 0.9)),
+                      url('/static/images/doc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+footer {
+  margin-bottom: 80px; /* Space for WhatsApp icon */
+  min-height: 100px; /* Make sure it has visible area */
+}
+/***********************/
+/*navigation bar styles*/
+ /* Custom animation for GNWekesa name*/
+ @keyframes glow {
+   /* these are the animated colors to be changing*/
+  0% { color: #ffffff; }
+  100% { color: #DA70D6; }
+}
+.gnw-brand {
+  font-size: 2rem;
+  text-align: left; /* Aligns the text to the left */
+  animation: glow 1.5s ease-in-out infinite alternate;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* Custom navbar link color */
+.navbar-dark .navbar-nav .nav-link {
+  color: #DA70D6 !important;
+}
+/* navbar change color on hover and active */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #001C6C !important; /* white on hover/active */
+}
+/* Hire Button Style */
+.hire-btn {
+  background-color: #001C6C;
+  color: white !important;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hire-btn:hover {
+  background-color: #DA70D6;
+  color: #fff !important;
+}
+ /* end of ustom animation for GNWekesa name*/
+ /*end of navigation bar styles*/
+ /***********************/
+
+
+/*style for my date*/
+.current-date {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 1.6rem;
+  font-family: Garamond, serif; /* More playful font */
+  color: #003366;
+  font-weight: 700;
+  background-color: #DA70D6;
+  padding: 10px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: transform 0.2s ease-in-out;
+}
+
+.current-date:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* style for the hover underline effect on my section titles,*/
+.section-title {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background-color: #DA70D6; 
+  transition: width 0.4s ease;
+  text-align: center;
+}
+
+.section-title:hover::after {
+  width: 100%;
+}
+/* end of style for tho hover underline effect on my section titles,*/
+
+
+
+
+/* style for the animation effect on the technical skills section
+it styles this tag <div class="skill-icon-hover">*/
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.skill-icon-hover:hover .skill-icon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+
+/* style for the about me section last section 
+and any section with <span class="d-inline-block hover-text">*/
+.hover-text:hover {
+  color: #0d6efd; /* Bootstrap primary color */
+  cursor: default;
+}
+
+/*  this CSS for hover effects of the projects section */
+  .carousel-item img {
+    transition: transform 0.3s ease;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .carousel-item:hover img {
+    transform: scale(1.02);
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+
+  /* custom color for the projects section*/
+  /* Custom arrow colors */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 28, 108, 1); /* Blue background */
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-size: 60%;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  }
+
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+
+  /* Hover effects */
+  .carousel-control-prev:hover .carousel-control-prev-icon,
+  .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 28, 108, 1); /* Solid blue on hover */
+    transform: scale(1.1);
+  }
+
+  /*end of custom color for the projects section*/
+
+  /* Hover effect for the technical skills section big image */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-effect:hover {
+    transform: scale(1.05); /* Slightly zoom in */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+
+  /* Hover effect for the image in education section */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-effect:hover {
+    transform: scale(1.05); /* Slightly zoom in */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+  /* Scroll Up Icon Hover Effect */
+/* Scroll Up Icon Hover Effect */
+.scrollup__icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .scrollup__icon:hover {
+    transform: translateY(-5px); /* Moves the icon up slightly */
+    color: #007bff; /* Changes the color to a blue on hover (adjust to your color) */
+  }
+  
+  /* Hide the button by default (until user scrolls down) */
+  .scrollup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff; /* Change to your desired color */
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scrollup.show {
+    display: block; /* Show the button when scrolled down */
+  }
+  
+/*style for the image that is on the hero section*/
+.blob-container::before {
+    content: '';
+    position: absolute;
+    top: -5%;     /* Was -10% */
+    left: -5%;    /* Was -10% */
+    width: 110%;  /* Was 120% */
+    height: 110%; /* Was 120% */
+    background: linear-gradient(135deg, #42a5f5, #478ed1);
+    border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
+    animation: blob 8s infinite ease-in-out;
+    z-index: 0;
+    filter: blur(15px); /* Optional: reduce blur too */
+  }
+  
+  
+  @keyframes blob {
+    0%, 100% {
+      border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
+    }
+    33% {
+      border-radius: 40% 60% 50% 70% / 60% 40% 60% 40%;
+    }
+    66% {
+      border-radius: 60% 50% 40% 60% / 50% 60% 50% 60%;
+    }
+  }
+  
+  /* start of style for a flipbook*/
+  #flipbook {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .page {
+    display: none;
+    padding: 20px;
+    font-size: 18px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .page.active {
+    display: block;
+  }
+
+  .controls {
+    margin-top: 20px;
+  }
+  /* end of start of style for a flipbook*/
+
+
+
+  /* style for technical skills section*/
+  .skills {
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title span {
+    color: #7c3aed;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .skill-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    filter: invert(28%) sepia(79%) saturate(5444%) hue-rotate(241deg) brightness(90%) contrast(92%);
+  }
+  
+  .skill-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #222;
+  }
+  
+  .skill-card.active {
+    background-color: #001C6C;
+    color: #ffffff;
+  }
+  
+  .skill-card.active img {
+    filter: brightness(0) invert(1);
+  }
+  /* end of style for technical skills section*/
+
+  /*style for my floating whatsapp icon*/
+  .whatsapp-float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    left: 20px; /* to make my whatsapp icon not overlap with my scroll icon*/
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 55px;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+    color: white;
+  }
+  
+/*style for sections to prevent them from overlapping */
+section {
+  padding: 2rem 0; /* Top and bottom padding */
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 3rem 0; /* More space on small screens */
+  }
+}
+/*******STYLE FOR projects.html*********/
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .project-img {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 0.375rem 0.375rem 0 0;
+    }
+    .btn-project {
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-project:hover {
+      background-color: #0b5ed7;
+      color: white;
+    }
+
+/*******END OF STYLE FOR projects.html*********/
