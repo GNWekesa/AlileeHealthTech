@@ -1,3 +1,14 @@
+
+# .gitignore
+
+# Exclude virtual environment
+myvenv/
+venv/
+
+# Exclude environment variables
 .env
+
+# Exclude IDE/cache files
 __pycache__/
 *.pyc
+.DS_Store
