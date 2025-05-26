@@ -9,6 +9,9 @@ A healthcare appointment reminder system with WhatsApp/SMS notifications, built 
 ## Screenshot
 ![Alilee HealthTech Dashboard](static/images/dashboard.png)
 
+## Screenshot
+Presentation  https://gamma.app/docs/Alilee-HealthTech-6vo99sd8vex7a48
+
 
 ## Features
 - 📅 Automated appointment reminders via WhatsApp/SMS
